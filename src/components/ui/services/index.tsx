@@ -27,8 +27,20 @@ const data: IService[] = [
 		title: "To'y kortej hizmati",
 		description: "Bizning to'y tashkilotimiz sizning orzularingizdagi to'yni amalga oshirish uchun barcha zarur xizmatlarni taklif etadi. Bizning tajribali jamoamiz sizga to'y marosimingizni mukammal tarzda rejalashtirish va o'tkazishda yordam beradi.",
 	},
+	{
+		id: 5,
+		title: "Catering hizmati",
+		description: "Mehmonlaringiz uchun mazali va estetik jihatdan mukammal taomlar. Har bir menyu sizning tadbir uslubingiz va didingizga mos ravishda tayyorlanadi.​"
+	},
+	{
+		id: 6,
+		title: "Love Story hizmati",
+		description: "Sizning sevgi hikoyangizni professional tarzda videoga olish. Bu videoni to‘y marosimida namoyish etib, mehmonlarga unutilmas taassurot qoldiring."
+	},
+	{ id: 7, title: "Karnay & Surnay hizmati", description: "An’anaviy karnay va surnay sadolari bilan to‘yingizga milliy ruh va tantanavorlik baxsh eting. Bu musiqa mehmonlarga bayram kayfiyatini ulashadi." },
+	{ id: 8, title: "Bezatish hizmati", description: "Zal va joylarni sizning orzuingizdagi uslubda bezatish. Har bir detal sizning didingizni aks ettiradi va mehmonlarga estetik zavq bag‘ishlaydi." },
 ]
-const Card = ({ title, description }: { title: string; description: string }) => {
+const Card = ({ id, title, description }: { title: string; description: string; id: number }) => {
 	return (
 		<div className="flex mb-8 justify-between items-center gap-8 max-[1200px]:flex-col max-[1200px]:gap-4 card">
 			<div className='max-w-[500px]'>
@@ -38,25 +50,37 @@ const Card = ({ title, description }: { title: string; description: string }) =>
 				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2">To’liq Ma’lumot</NavLink>
 			</div>
 
-			<img src="/1.webp" alt="" />
+			<img src={`/${id}.webp`} alt="" />
 		</div>
 	)
 }
 
-export const HomeServices = () => {
-	return <section className="bg-[#879a7737] py-20">
+export const HomeServices = ({ showItems = 3 }: { showItems?: number }) => {
+	return	<>
+		{showItems !== 3 && 		<section className='py-20 mb-20'>
+			<div className="container  ">
+				<h2 className="text-3xl font-bold title max-w-[650px]">Bizning Xizmatlarimiz</h2>
+				<p className="mt-4 max-w-[650px] font-normal text-[18px] text-[#666]">Sizning maxsus kuningizni unutilmas qilish uchun keng ko‘lamli xizmatlarni taklif etamiz. Har bir tafsilotga e’tibor bilan yondashamiz.</p>
+			</div>
+
+		</section>}
+	<section className="bg-[#879a7737] py-20	">
+	
 		<div className="container">
 
 			<h2 className="text-[#333333] text-4xl font-semibold leading-[44px] mb-10 title">Servislarimiz</h2>
 
-			{data.map((item) => (
-				<Card key={item.id} title={item.title} description={item.description} />
+			{data.map((item, index) => (
+				showItems >= index && <Card key={item.id} id={item.id} title={item.title} description={item.description} />
 			))}
 
-			<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10'>
-				<p>Barcha Servislar</p>
-				<img src="/icons/order.svg" alt="" className="inline-block ml-2" />
-			</button>
+			{showItems === 3 && <NavLink to={"/services"}>
+				<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10'>
+					<p>Barcha Servislar</p>
+					<img src="/icons/order.svg" alt="" className="inline-block ml-2" />
+				</button>
+			</NavLink>}
 		</div>
 	</section>
+	</>
 }
