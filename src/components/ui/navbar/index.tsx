@@ -34,7 +34,7 @@ export const Navbar = () => {
 	}
 
 	return (
-		<nav className="shadow-md relative z-50 bg-white" data-aos="zoom-in">
+		<nav className="border-b border-[#D1D1D1] fixed top-0 w-full z-50 backdrop-blur-xl" data-aos="zoom-in">
 			<div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
 				<a href="/" className="text-lg font-bold">
 					<img src="/icons/logo.svg" alt="logo" />

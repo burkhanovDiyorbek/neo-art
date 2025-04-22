@@ -42,12 +42,12 @@ const data: IService[] = [
 ]
 const Card = ({ id, title, description }: { title: string; description: string; id: number }) => {
 	return (
-		<div className="flex mb-8 justify-between items-center gap-8 max-[1200px]:flex-col max-[1200px]:gap-4 card">
+		<div className="flex mb-8 justify-between items-center gap-8 max-[1200px]:flex-col-reverse max-[1200px]:gap-4 card">
 			<div className='max-w-[500px]'>
-				<h3 className="text-[#333333] text-2xl font-semibold leading-[28px] mb-4 title">{title}</h3>
-				<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 ">{description}</p>
+				<h3 className="text-[#333333] text-2xl font-semibold leading-[28px] mb-4 title max-[500px]:text-[20px] max-[500px]:mb-2.5">{title}</h3>
+				<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 max-[500px]:mb-4 max-[500px]:text-[14px] max-[500px]:leading-[21px]">{description}</p>
 
-				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2">To’liq Ma’lumot</NavLink>
+				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2 max-[500px]:text-[12px]">To’liq Ma’lumot</NavLink>
 			</div>
 
 			<img src={`/${id}.webp`} alt="" />
@@ -57,7 +57,7 @@ const Card = ({ id, title, description }: { title: string; description: string; 
 
 export const HomeServices = ({ showItems = 3 }: { showItems?: number }) => {
 	return	<>
-		{showItems !== 3 && 		<section className='py-20 mb-20'>
+		{showItems !== 3 && 		<section className='py-20 mb-20 mt-20'>
 			<div className="container  ">
 				<h2 className="text-3xl font-bold title max-w-[650px]">Bizning Xizmatlarimiz</h2>
 				<p className="mt-4 max-w-[650px] font-normal text-[18px] text-[#666]">Sizning maxsus kuningizni unutilmas qilish uchun keng ko‘lamli xizmatlarni taklif etamiz. Har bir tafsilotga e’tibor bilan yondashamiz.</p>

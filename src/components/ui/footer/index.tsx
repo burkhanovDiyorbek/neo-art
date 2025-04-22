@@ -30,10 +30,10 @@ export const Footer = () => {
 	return (
 		<footer className="py-4">
 			<div className="container mx-auto text-center">
-				<div className="flex justify-between items-start border-b border-[#D1D1D1] pb-10 mb-10 flex-wrap gap-8">
-					<div className="max-w-[500px] w-full text-left">
-						<NavLink to='/' className="mb-4 block w-40 h-auto">
-							<img src={logo} alt="Logo" className="w-40 h-auto" />
+				<div className="flex justify-between items-start border-b border-[#D1D1D1] pb-10 mb-10 flex-wrap gap-8 max-[500px]:justify-center">
+					<div className="max-w-[500px] w-full text-left flex flex-col gap-4 max-[500px]:items-center">
+						<NavLink to='/' className="mb-4 block w-40 h-auto max-[500px]:text-center  max-[500px]:w-25  max-[500px]:h-8  max-[500px]:pb-4 "> 
+							<img src={logo} alt="Logo" className="w-40 h-auto  max-[500px]:mx-auto" />
 						</NavLink>
 
 						<div className="flex gap-3">
@@ -45,17 +45,17 @@ export const Footer = () => {
 						</div>
 					</div>
 
-					<ul className="flex gap-4 flex-col">
+					<ul className="flex gap-4 flex-col  max-[500px]:items-center">
 						{navItems1.map((item, index) => (
-							<NavLink key={index} to={item.to} className="text-[18px] text-[#333] font-medium">
+							<NavLink key={index} to={item.to} className="text-[18px] text-[#333] font-medium  max-[500px]:self-center self-start hover:text-[#879A77]  max-[500px]:text-center">
 								{item.label}
 							</NavLink>
 						))}
 					</ul>
 
-					<ul className="flex gap-4 flex-col self-start">
+					<ul className="flex gap-4 flex-col self-start  max-[500px]:items-center">
 						{navItems2.map((item, index) => (
-							<NavLink key={index} to={item.to} className="text-[18px] text-[#333] font-medium">
+							<NavLink key={index} to={item.to} className="text-[18px] text-[#333] font-medium  max-[500px]:self-center self-start hover-text-[#879A77]  max-[500px]:text-center">
 								{item.label}
 							</NavLink>
 						))}
@@ -73,7 +73,12 @@ export const Footer = () => {
 					</ul>
 				</div>
 
-				<p className="text-[#888] text-sm">&copy; {new Date().getFullYear()} Barcha huquqlar himoyalangan</p>
+<div className="flex justify-between items-center gap-4 flex-wrap">
+
+				<p>NeoArt Wedding — To‘yingizga nafislik bag‘ishlaymiz.</p>
+
+				<p>© {new Date().getFullYear()} Neoart Wedding, All Rights Reserved.</p>
+</div>
 			</div>
 		</footer>
 	)

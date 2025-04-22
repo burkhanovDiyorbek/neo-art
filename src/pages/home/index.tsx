@@ -11,12 +11,12 @@ import { ArtistsSlide, ContactForm, HomeServices } from '../../components/ui'
 export const Home = () => {
 	return (
 		<>
-			<section className="flex flex-col items-center justify-center py-[55px]" data-aos="zoom-in-up">
+			<section className="flex flex-col items-center justify-center py-[55px] mt-20" data-aos="zoom-in-up">
 				<div className='container flex items-center justify-center gap-[53px] max-[1200px]:flex-wrap-reverse'>
 					<Swiper pagination={true} modules={[Pagination]} className='max-w-[570px] w-full'>
 						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/2-silde.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/3-slide.webp" alt="" /></SwiperSlide>
 					</Swiper>
 					<div>
 						<h2 className="text-[#333333] text-5xl font-bold  leading-[56px] mb-4 max-[500px]:text-[26px] max-[500px]:leading-[31px]">NeoArt – Sizning Baxtli Kuningiz Uchun</h2>
