@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { Link, NavLink, useNavigate, useLocation } from "react-router-dom"
+import {  useState } from "react"
+import {  NavLink, useNavigate, useLocation } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 
 
