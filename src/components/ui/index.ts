@@ -1,0 +1,5 @@
+export {Navbar} from './navbar'
+export { Footer } from './footer'
+export { HomeServices } from './services'
+export { ContactForm } from './contact-form'
+export { ArtistsSlide } from './artists-slide'
