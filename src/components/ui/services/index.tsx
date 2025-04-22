@@ -38,7 +38,7 @@ const Card = ({ title, description }: { title: string; description: string }) =>
 				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2">To’liq Ma’lumot</NavLink>
 			</div>
 
-			<img src="/public/1.webp" alt="" />
+			<img src="/1.webp" alt="" />
 		</div>
 	)
 }
@@ -55,7 +55,7 @@ export const HomeServices = () => {
 
 			<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10'>
 				<p>Barcha Servislar</p>
-			<img src="/public/icons/order.svg" alt="" className="inline-block ml-2" />
+				<img src="/icons/order.svg" alt="" className="inline-block ml-2" />
 			</button>
 		</div>
 	</section>

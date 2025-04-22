@@ -14,9 +14,9 @@ export const Home = () => {
 			<section className="flex flex-col items-center justify-center h-screen" data-aos="zoom-in-up">
 				<div className='container flex items-center justify-center gap-[53px] max-[1200px]:flex-wrap'>
 					<Swiper pagination={true} modules={[Pagination]} className='max-w-[570px] w-full'>
-						<SwiperSlide><img src="/public/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/public/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/public/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
 					</Swiper>
 					<div>
 						<h2 className="text-[#333333] text-5xl font-bold  leading-[56px] mb-4">NeoArt – Sizning Baxtli Kuningiz Uchun</h2>
@@ -37,13 +37,13 @@ export const Home = () => {
 						<p className="text-[#666666] text-lg font-normal font-['Plus_Jakarta_Sans'] leading-7 tracking-tight mb-8">NeoArt jamoasi 2019-yil 15-avgust kuni Ahmedjanov Samandar Rustamovich boshchiligida tashkil etilgan. Jamoamizning asosiy maqsadi — mijozlarimizning eng quvonchli kunlarini yanada go‘zal va esda qolarli tarzda o‘tkazishlariga xizmat ko‘rsatishdir. Hurmat bilan — NeoArt.</p>
 						<Button text={'Buyurtma berish'} icon='/public/icons/order.svg' />
 					</div>
-					<img src="/public/man.webp" alt="" />
+					<img src="/man.webp" alt="" />
 
 				</div>
 			</section>
 			<HomeServices />
-			<ArtistsSlide/>
-			<ContactForm/>
+			<ArtistsSlide />
+			<ContactForm />
 		</>
 	)
 }
