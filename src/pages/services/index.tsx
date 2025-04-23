@@ -48,7 +48,7 @@ export const Services = () => {
 	const { id } = useParams<{ id: string }>()
 
 	return <main className='mt-20'>
-		<section className='py-20'>
+		<section className='py-20 max-[500px]:py-10'>
 			<div className="container  ">
 				<h2 className="text-3xl font-bold title max-w-[650px]">{data[id as keyof IData]?.title}</h2>
 				<p className="mt-4 max-w-[650px] font-normal text-[18px] text-[#666]">{data[id as keyof IData]?.description}</p>

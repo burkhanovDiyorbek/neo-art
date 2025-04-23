@@ -37,10 +37,17 @@ export const Home = () => {
 						<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 max-[500px]:text-[14px] max-[500px]:leading-[21px] max-[500px]:mb-4">NeoArt jamoasi 2019-yil 15-avgust kuni Ahmedjanov Samandar Rustamovich boshchiligida tashkil etilgan. Jamoamizning asosiy maqsadi — mijozlarimizning eng quvonchli kunlarini yanada go‘zal va esda qolarli tarzda o‘tkazishlariga xizmat ko‘rsatishdir. Hurmat bilan — NeoArt.</p>
 						<Button text={'Buyurtma berish'} icon='/public/icons/order.svg' />
 					</div>
-					<img src="/man.webp" alt="" />
+					<img src="/man.webp" alt="" className='max-w-[538px] max-h-[558px] w-full h-full object-cover' />
 
 				</div>
 			</section>
+			<section className='py-20' data-aos="zoom-in-up">
+				<div className="container">
+
+				<iframe src="https://www.youtube.com/embed/QZqrIy1BdnA" title="Hayotingizdagi eng muhim kunni biz bilan unutilmas qilishingiz mumkin!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className='w-full h-full min-h-[400px]'></iframe>
+				</div>
+			</section>
+
 			<HomeServices />
 			<ArtistsSlide />
 			<ContactForm />
