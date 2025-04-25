@@ -9,9 +9,8 @@ import location from '/icons/location.svg'
 export const Footer = () => {
 	const navItems1 = [
 		{ label: 'Asosiy sahifa', to: '/' },
-		{ label: 'Biz haqimizda', to: '/about' },
-		{ label: 'Xizmatlar', to: '/services' },
-		{ label: 'Yangiliklar', to: '/news' },
+		{ label: 'Biz haqimizda', to: '/' },
+		{ label: 'Xizmatlar', to: '/services/artists' },
 	]
 
 	const navItems2 = [
@@ -21,9 +20,9 @@ export const Footer = () => {
 	]
 
 	const socialIcons = [
-		{ href: '#', icon: instagram, alt: 'Instagram' },
-		{ href: '#', icon: telegram, alt: 'Telegram' },
-		{ href: '#', icon: youtube, alt: 'YouTube' },
+		{ href: 'https://www.instagram.com/neoart_wedding', icon: instagram, alt: 'Instagram' },
+		{ href: 'https://t.me/neoart_wedding', icon: telegram, alt: 'Telegram' },
+		{ href: 'http://www.youtube.com/@NeoartWedding', icon: youtube, alt: 'YouTube' },
 	]
 
 	return (
