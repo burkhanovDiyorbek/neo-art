@@ -1,6 +1,6 @@
-import {  useState } from "react"
-import {  NavLink, useNavigate, useLocation } from "react-router-dom"
 import { Menu, X } from "lucide-react"
+import { useState } from "react"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 
 
 export const Navbar = () => {
@@ -54,16 +54,19 @@ export const Navbar = () => {
 					{/* Scroll to #about */}
 					<button
 						onClick={() => scrollToSection("about")}
-						className="text-[#333] text-[18px] font-[500] hover:text-[#879A77] transition-all duration-300 ease-in-out"
+						className="text-[#333] text-[18px] font-[500] hover:text-[#879A77]  border-b-1 border-transparent hover:!border-[#879a77] transition-all duration-300 ease-in-out"
 					>
 						Biz haqimizda
 					</button>
 
 					{/* Dropdown */}
 					<li className="relative group cursor-pointer">
-						<span className="text-[#333] text-[18px] font-[500] hover:text-[#879A77] transition-all duration-300 ease-in-out">
-							Servislar
-						</span>
+						<div className='flex gap-1'>
+							<span className="text-[#333] text-[18px] font-[500] hover:text-[#879A77] transition-all duration-300 ease-in-out ">
+								Servislar
+							</span>
+							<img src="/icons/arrowdown.svg" className='group-hover:rotate-180 transition-all duration-300' />
+						</div>
 						<div className="absolute top-full left-0 bg-white shadow-lg rounded-md p-2 z-10 w-40 hidden group-hover:block">
 							<NavLink to="/services/artists" className="block px-4 py-2 text-sm hover:bg-gray-100 text-[#333]">San'atkorlar</NavLink>
 							<NavLink to="/services/starter" className="block px-4 py-2 text-sm hover:bg-gray-100 text-[#333]">Boshlovchilar</NavLink>
@@ -71,14 +74,14 @@ export const Navbar = () => {
 						</div>
 					</li>
 
-					<a href="tel:+998931274444" className="text-[18px] text-[#333] font-[500] hover:text-[#879A77]">Aloqa</a>
+					<a href="tel:+998931274444" className="text-[#333] text-[18px] font-[500] hover:text-[#879A77]  border-b-1 border-transparent hover:!border-[#879a77] transition-all duration-300 ease-in-out">Aloqa</a>
 				</ul>
 			</div>
 
 			{/* Mobile menu */}
 			{menuOpen && (
-				<div className="md:hidden bg-white w-full shadow-md px-4 py-6 absolute top-full left-0">
-					<ul className="flex flex-col space-y-4">
+				<div className="md:hidden bg-white w-full shadow-md px-4 py-6 absolute top-full left-0 h-screen z-50">
+					<ul className="flex flex-col space-y-4 items-center text-center">
 						<NavLink to="/" className={isActive("/")} onClick={() => setMenuOpen(false)}>Asosiy Sahifa</NavLink>
 
 						{/* Scroll to #about */}
@@ -90,11 +93,10 @@ export const Navbar = () => {
 						</button>
 
 						<div>
-							<p className="text-[#333] font-[500] mb-2">Servislar</p>
-							<ul className="ml-4 space-y-2">
-								<NavLink to="/services/artists" className="block text-sm text-[#333]" onClick={() => setMenuOpen(false)}>San'atkorlar</NavLink>
-								<NavLink to="/services/starter" className="block text-sm text-[#333]" onClick={() => setMenuOpen(false)}>Boshlovchilar</NavLink>
-								<NavLink to="/services/groups" className="block text-sm text-[#333]" onClick={() => setMenuOpen(false)}>Guruhlar</NavLink>
+							<ul className="ml-2 text-[#333] text-[18px] font-[500]">
+								<NavLink to="/services/artists" className="block mb-4 text-[#333]" onClick={() => setMenuOpen(false)}>San'atkorlar</NavLink>
+								<NavLink to="/services/starter" className="block mb-4 text-[#333]" onClick={() => setMenuOpen(false)}>Boshlovchilar</NavLink>
+								<NavLink to="/services/groups" className="block text-[#333]" onClick={() => setMenuOpen(false)}>Guruhlar</NavLink>
 							</ul>
 						</div>
 

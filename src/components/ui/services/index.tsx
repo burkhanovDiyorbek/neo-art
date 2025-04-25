@@ -42,9 +42,9 @@ const data: IService[] = [
 ]
 const Card = ({ id, title, description }: { title: string; description: string; id: number }) => {
 	return (
-		<div className="flex mb-8 justify-between items-center gap-8 max-[1200px]:flex-col-reverse max-[1200px]:gap-4 card">
+		<div className="flex mb-8 min-[1200px]:mb-16 justify-between items-center gap-8 max-[1200px]:flex-col-reverse max-[1200px]:gap-4 card">
 			<div className='max-w-[500px]'>
-				<h3 className="text-[#333333] text-2xl font-semibold leading-[28px] mb-4 title max-[500px]:text-[20px] max-[500px]:mb-2.5">{title}</h3>
+				<h3 className="text-[#333333] text-[26px] font-semibold leading-[28px] mb-4 title max-[500px]:text-[20px] max-[500px]:mb-2.5">{title}</h3>
 				<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 max-[500px]:mb-4 max-[500px]:text-[14px] max-[500px]:leading-[21px]">{description}</p>
 
 				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2 max-[500px]:text-[12px]">To’liq Ma’lumot</NavLink>
@@ -57,7 +57,7 @@ const Card = ({ id, title, description }: { title: string; description: string; 
 
 export const HomeServices = ({ showItems = 3 }: { showItems?: number }) => {
 	return	<>
-		{showItems !== 3 && 		<section className='py-20 mb-20 mt-20'>
+		{showItems !== 3 && 		<section className='py-20 mx-20 max-[500px]:!py-10 max-[500px]:!my-10'>
 			<div className="container  ">
 				<h2 className="text-3xl font-bold title max-w-[650px]">Bizning Xizmatlarimiz</h2>
 				<p className="mt-4 max-w-[650px] font-normal text-[18px] text-[#666]">Sizning maxsus kuningizni unutilmas qilish uchun keng ko‘lamli xizmatlarni taklif etamiz. Har bir tafsilotga e’tibor bilan yondashamiz.</p>
@@ -75,7 +75,7 @@ export const HomeServices = ({ showItems = 3 }: { showItems?: number }) => {
 			))}
 
 			{showItems === 3 && <NavLink to={"/services"}>
-				<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10'>
+				<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10  max-[500px]:text-[12px] max-[500px]:!py-2 max-[500px]:!px-4 max-[500px]:h-[33px]'>
 					<p>Barcha Servislar</p>
 					<img src="/icons/order.svg" alt="" className="inline-block ml-2" />
 				</button>

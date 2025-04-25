@@ -8,15 +8,15 @@ import { Pagination } from 'swiper/modules'
 import { artistsData, groupsData, startersData } from '../../../mocks'
 
 export const ArtistsSlide = () => {
-  const [selectedCategory, setSelectedCategory] = useState('boshlovchilar')
+  const [selectedCategory, setSelectedCategory] = useState('Boshlovchilar')
 
   const getDataByCategory = () => {
     switch (selectedCategory) {
-      case 'san\'atkorlar':
+      case 'San\'atkorlar':
         return artistsData
-      case 'guruhlar':
+      case 'Guruhlar':
         return groupsData
-      case 'boshlovchilar':
+      case 'Boshlovchilar':
       default:
         return startersData
     }
@@ -28,7 +28,7 @@ export const ArtistsSlide = () => {
     <section className='artists-silde pt-10'>
       <div className="container">
         <div className="flex items-center justify-between mb-6">
-          <h2 className='title !mb-0'>Sanatkorlar</h2>
+          <h2 className='title !mb-0'>{selectedCategory}</h2>
 
           {/* Dropdown */}
           <select
@@ -36,9 +36,9 @@ export const ArtistsSlide = () => {
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
-            <option value="san'atkorlar">San'atkorlar</option>
-            <option value="guruhlar">Guruhlar</option>
-            <option value="boshlovchilar">Boshlovchilar</option>
+            <option value="San'atkorlar">San'atkorlar</option>
+            <option value="Guruhlar">Guruhlar</option>
+            <option value="Boshlovchilar">Boshlovchilar</option>
           </select>
         </div>
 
@@ -46,7 +46,7 @@ export const ArtistsSlide = () => {
           pagination={true}
           slidesPerView={4}
           modules={[Pagination]}
-          className='w-full'
+          className='w-full max-[500px]:mb-10'
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 20 },
             640: { slidesPerView: 2, spaceBetween: 20 },
@@ -63,7 +63,7 @@ export const ArtistsSlide = () => {
             } as React.CSSProperties
           }
         >
-          {dataToShow.slice(0, 5).map((item, index) => (
+          {dataToShow.map((item, index) => (
             <SwiperSlide key={index}>
               <Card name={item.name} price={item.price} imageUrl={item.imageUrl} />
             </SwiperSlide>

@@ -57,7 +57,7 @@ export const Services = () => {
 		</section>
 		<section className="bg-[#879a7737] py-20">
 			<div className="container">
-				<div className='flex items-center justify-end gap-8 max-[1200px]:flex-col max-[1200px]:gap-4 card flex-wrap'>
+				<div className='flex items-center justify-start gap-8 max-[1200px]:flex-col max-[1200px]:gap-4 flex-wrap'>
 					{data[id as keyof IData]?.data?.map((item, index) => <Card name={item.name} price={item.price} imageUrl={item.imageUrl} key={index} />
 					)}
 				</div>
