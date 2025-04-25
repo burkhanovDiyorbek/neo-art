@@ -24,7 +24,10 @@ export const Home = () => {
 
 						<div className="flex gap-4">
 							<Button text='Bog’lanish' icon='/icons/phone.svg' />
+							<a href="#video" className='opacity-80 hover:opacity-100 transition'>
+
 							<Button text='Video' icon='/icons/video.svg' />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -36,8 +39,9 @@ export const Home = () => {
 						<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-4 max-[500px]:text-[14px] max-[500px]:leading-[21px] max-[500px]:mb-2.5">Bizning to‘y tashkiloti veb-saytimizga xush kelibsiz. Siz bilan hayotimizdagi eng muhim kunlardan birini nishonlashni intiqlik bilan kutmoqdamiz. Ushbu veb-sayt to‘yimizga oid barcha muhim tafsilotlarni qulay va interaktiv tarzda siz bilan baham ko‘rish uchun yaratildi. Samimiy e’tiboringiz va doimiy qo‘llab-quvvatlaganingiz uchun chuqur minnatdorchilik bildiramiz. Ushbu unutilmas kunda siz bilan birga bo‘lish biz uchun katta sharaf bo‘ladi va biz bu kunni birgalikda nishonlashni orziqib kutamiz.</p>
 						<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 max-[500px]:text-[14px] max-[500px]:leading-[21px] max-[500px]:mb-4">NeoArt jamoasi 2019-yil 15-avgust kuni Ahmedjanov Samandar Rustamovich boshchiligida tashkil etilgan. Jamoamizning asosiy maqsadi — mijozlarimizning eng quvonchli kunlarini yanada go‘zal va esda qolarli tarzda o‘tkazishlariga xizmat ko‘rsatishdir. Hurmat bilan — NeoArt.</p>
 						<Button text={'Buyurtma berish'} icon='/icons/order.svg' />
+						<span id='video'></span>
 					</div>
-					<img src="/man.webp" alt="" className='max-w-[538px] max-h-[558px] w-full h-full object-cover max-[500px]:max-h-[300px]' />
+					<img src="/man.webp" alt="" className='max-w-[538px] max-h-[558px] w-full h-full object-cover max-[500px]:max-h-[300px]'   />
 
 				</div>
 			</section>

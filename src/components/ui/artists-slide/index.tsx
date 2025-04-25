@@ -28,7 +28,7 @@ export const ArtistsSlide = () => {
     <section className='artists-silde pt-10'>
       <div className="container">
         <div className="flex items-center justify-between mb-6">
-          <h2 className='title !mb-0'>{selectedCategory}</h2>
+          <h2 className='title !mb-0 text-3xl'>{selectedCategory}</h2>
 
           {/* Dropdown */}
           <select
@@ -48,7 +48,7 @@ export const ArtistsSlide = () => {
           modules={[Pagination]}
           className='w-full max-[500px]:mb-10'
           breakpoints={{
-            320: { slidesPerView: 1, spaceBetween: 20 },
+            320: { slidesPerView: 1.3, spaceBetween: 20 },
             640: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 30 },
             1280: { slidesPerView: 4, spaceBetween: 40 },
