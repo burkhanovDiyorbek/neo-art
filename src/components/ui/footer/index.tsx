@@ -45,18 +45,18 @@ export const Footer = () => {
 						</ul>
 					</div>
 
-					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col max-[500px]:items-center">
+					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col max-[500px]:items-center items-start">
 						{navItems1.map((item, index) => (
 							<li key={index}>
 
-							<NavLink to={item.to} className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium  max-[500px]:self-center self-start hover:text-[#879A77]  max-[500px]:text-center">
+							<NavLink to={item.to} className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium  max-[500px]:self-center !self-start hover:text-[#879A77]  max-[500px]:text-center">
 								{item.label}
 							</NavLink>
 							</li>
 						))}
 					</ul>
 
-					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col self-start  max-[500px]:items-center max-[500px]:self-center">
+					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col self-start  max-[500px]:items-center max-[500px]:self-center items-start">
 						{navItems2.map((item, index) => (
 							<li key={index}>
 
