@@ -50,7 +50,7 @@ const Card = ({ id, title, description }: { title: string; description: string; 
 				<NavLink to={"/"} className=" text-[#879a77] text-base font-semibold leading-tight tracking-tight pb-2 border-b-2 max-[500px]:text-[12px]">To’liq Ma’lumot</NavLink>
 			</div>
 
-			<img src={`/${id}.webp`} alt="" />
+			<img src={`/${id}.webp`} alt="man img" />
 		</div>
 	)
 }
@@ -75,9 +75,9 @@ export const HomeServices = ({ showItems = 3 }: { showItems?: number }) => {
 			))}
 
 			{showItems === 3 && <NavLink to={"/services"}>
-				<button className='bg-[#879A77] text-white text-[18px] font-[500] hover:bg-[#333] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10  max-[500px]:text-[12px] max-[500px]:!py-2 max-[500px]:!px-4 max-[500px]:h-[33px]'>
+				<button className='bg-[#6F845F] text-white text-[18px] font-[500] hover:bg-[#879A77] transition-all duration-300 ease-in-out flex gap-2 items-center justify-center h-[50px] py-4 w-full mt-10  max-[500px]:text-[12px] max-[500px]:!py-2 max-[500px]:!px-4 max-[500px]:h-[33px]'>
 					<p>Barcha Servislar</p>
-					<img src="/icons/order.svg" alt="" className="inline-block ml-2" />
+					<img src="/icons/order.svg" alt="order icon" className="inline-block ml-2" />
 				</button>
 			</NavLink>}
 		</div>

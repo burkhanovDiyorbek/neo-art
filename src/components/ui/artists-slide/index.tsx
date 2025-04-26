@@ -30,11 +30,14 @@ export const ArtistsSlide = () => {
         <div className="flex items-center justify-between mb-6">
           <h2 className='title !mb-0 text-3xl'>{selectedCategory}</h2>
 
+          <label id="lbl-main-menu-mob" className='hidden'>Select Item</label>
+
           {/* Dropdown */}
           <select
             className="border-b border-[#879A77] font-bold px-4 py-2 text-[#879A77] focus:outline-none max-[500px]:max-w-[100px] max-[500px]:text-[12px] max-[500px]:font-bold max-[500px]:py-1 max-[500px]:px-0"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
+            aria-labelledby="lbl-main-menu-mob"
           >
             <option value="San'atkorlar">San'atkorlar</option>
             <option value="Guruhlar">Guruhlar</option>

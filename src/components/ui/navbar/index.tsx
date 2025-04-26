@@ -29,7 +29,7 @@ export const Navbar = () => {
 
 	const isActive = (path: string) => {
 		return location.pathname === path
-			? "text-[#879A77] border-b-1 text-[18px] font-[500]"
+			? "text-[#668949] border-b-1 text-[18px] font-[500]"
 			: "text-[#333] text-[18px] font-[500] hover:text-[#879A77] border-b-1 border-[#fff] transition-all duration-300 ease-in-out"
 	}
 
@@ -65,7 +65,7 @@ export const Navbar = () => {
 							<span className="text-[#333] text-[18px] font-[500] hover:text-[#879A77] transition-all duration-300 ease-in-out ">
 								Servislar
 							</span>
-							<img src="/icons/arrowdown.svg" className='group-hover:rotate-180 transition-all duration-300' />
+							<img src="/icons/arrowdown.svg" className='group-hover:rotate-180 transition-all duration-300'alt='arrow down' />
 						</div>
 						<div className="absolute top-full left-0 bg-white shadow-lg rounded-md p-2 z-10 w-40 hidden group-hover:block">
 							<NavLink to="/services/artists" className="block px-4 py-2 text-sm hover:bg-gray-100 text-[#333]">San'atkorlar</NavLink>

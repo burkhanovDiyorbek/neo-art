@@ -34,40 +34,54 @@ export const Footer = () => {
 							<img src={logo} alt="Logo" className="w-40 h-auto  max-[500px]:mx-auto" />
 						</NavLink>
 
-						<div className="flex gap-3">
+						<ul className="flex gap-3">
 							{socialIcons.map((item, index) => (
+								<li key={index}>
 								<a key={index} href={item.href} className="hover:opacity-70 transition">
 									<img src={item.icon} alt={item.alt} className="w-6 h-6" />
 								</a>
+								</li>
 							))}
-						</div>
+						</ul>
 					</div>
 
 					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col max-[500px]:items-center">
 						{navItems1.map((item, index) => (
-							<NavLink key={index} to={item.to} className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium  max-[500px]:self-center self-start hover:text-[#879A77]  max-[500px]:text-center">
+							<li key={index}>
+
+							<NavLink to={item.to} className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium  max-[500px]:self-center self-start hover:text-[#879A77]  max-[500px]:text-center">
 								{item.label}
 							</NavLink>
+							</li>
 						))}
 					</ul>
 
 					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col self-start  max-[500px]:items-center max-[500px]:self-center">
 						{navItems2.map((item, index) => (
+							<li key={index}>
+
 							<NavLink key={index} to={item.to} className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium  max-[500px]:self-center self-start hover-text-[#879A77]  max-[500px]:text-center">
 								{item.label}
 							</NavLink>
+							</li>
 						))}
 					</ul>
 
 					<ul className="flex gap-4 max-[500px]:gap-2.5 flex-col self-start max-[500px]:self-center max-[500px]:items-center">
+						<li>
+
 						<a href="tel:+998931274444" className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium flex gap-2 items-center">
 							<img src={phone} alt="Phone" className="w-6 h-6" />
 							<span>+998 93 127-44-44</span>
 						</a>
+						</li>
+						<li>
+
 						<a href="https://maps.google.com" className="text-[18px] max-[500px]:text-[14px] text-[#333] font-medium flex gap-2 items-center">
 							<img src={location} alt="Location" className="w-6 h-6" />
 							<span>Toshkent, Yunusobod</span>
 						</a>
+						</li>
 					</ul>
 				</div>
 

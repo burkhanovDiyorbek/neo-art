@@ -14,18 +14,19 @@ export const Home = () => {
 			<section className="flex flex-col items-center justify-center py-[55px] mt-20" data-aos="zoom-in-up">
 				<div className='container flex items-center justify-center gap-[53px] max-[1200px]:flex-wrap-reverse'>
 					<Swiper pagination={true} modules={[Pagination]} className='max-w-[570px] w-full'>
-						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/2-silde.webp" alt="" /></SwiperSlide>
-						<SwiperSlide><img src="/3-slide.webp" alt="" /></SwiperSlide>
+						<SwiperSlide><img src="/guy_in_a_black_suit.webp" alt="guy image" /></SwiperSlide>
+						<SwiperSlide><img src="/2-silde.webp" alt="order icon" /></SwiperSlide>
+						<SwiperSlide><img src="/3-slide.webp" alt="slide img" /></SwiperSlide>
 					</Swiper>
 					<div>
 						<h2 className="text-[#333333] text-5xl font-bold  leading-[56px] mb-4 max-[500px]:text-[26px] max-[500px]:leading-[31px]">NeoArt – Sizning Baxtli Kuningiz Uchun</h2>
 						<p className="mb-8 text-[#666666] text-lg font-normal leading-7 tracking-tight  max-[500px]:text-[14px]  max-[500px]:leading-[21px]">Maxsus kuningizni bizning tajribamizga ishonib topshiring. Mukammal va xursandchilikka to'la to'y marosimingiz uchun xizmatlarimizni buyurtma qiling.</p>
 
 						<div className="flex gap-4">
+							<a href='tel:+998931274444'>
 							<Button text='Bog’lanish' icon='/icons/phone.svg' />
+							</a>
 							<a href="#video" className='opacity-80 hover:opacity-100 transition'>
-
 							<Button text='Video' icon='/icons/video.svg' />
 							</a>
 						</div>
@@ -38,10 +39,12 @@ export const Home = () => {
 						<h2 className="text-[#333333] text-4xl font-semibold leading-[44px] mb-4 title max-[500px]:mb-2.5">Organizatsiyamiz haqida</h2>
 						<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-4 max-[500px]:text-[14px] max-[500px]:leading-[21px] max-[500px]:mb-2.5">Bizning to‘y tashkiloti veb-saytimizga xush kelibsiz. Siz bilan hayotimizdagi eng muhim kunlardan birini nishonlashni intiqlik bilan kutmoqdamiz. Ushbu veb-sayt to‘yimizga oid barcha muhim tafsilotlarni qulay va interaktiv tarzda siz bilan baham ko‘rish uchun yaratildi. Samimiy e’tiboringiz va doimiy qo‘llab-quvvatlaganingiz uchun chuqur minnatdorchilik bildiramiz. Ushbu unutilmas kunda siz bilan birga bo‘lish biz uchun katta sharaf bo‘ladi va biz bu kunni birgalikda nishonlashni orziqib kutamiz.</p>
 						<p className="text-[#666666] text-lg font-normal leading-7 tracking-tight mb-8 max-[500px]:text-[14px] max-[500px]:leading-[21px] max-[500px]:mb-4">NeoArt jamoasi 2019-yil 15-avgust kuni Ahmedjanov Samandar Rustamovich boshchiligida tashkil etilgan. Jamoamizning asosiy maqsadi — mijozlarimizning eng quvonchli kunlarini yanada go‘zal va esda qolarli tarzda o‘tkazishlariga xizmat ko‘rsatishdir. Hurmat bilan — NeoArt.</p>
+						<a href="https://t.me/neoart_wedding">
 						<Button text={'Buyurtma berish'} icon='/icons/order.svg' />
+						</a>
 						<span id='video'></span>
 					</div>
-					<img src="/man.webp" alt="" className='max-w-[538px] max-h-[558px] w-full h-full object-cover max-[500px]:max-h-[300px]'   />
+					<img src="/man.webp" alt="man image" className='max-w-[538px] max-h-[558px] w-full h-full object-cover max-[500px]:max-h-[300px]'   />
 
 				</div>
 			</section>
